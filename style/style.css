@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:wght@400;500;900&display=swap');
+
+:root {
+  --clr-screen:rgb(255, 255, 255) ;
+  --clr-dark: #7809c2;
+  --clr-white: rgb(26, 142, 225);
+  --max-width: 1140px;
+  --transition: all 0.5s ease;
+}
+li{
+  list-style: none;
+}
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 16px;
+}
+body{
+  font-family: 'Bungee Spice', cursive;
+  font-size: larger;
+  background-image: url('../cinema.jfif');
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;  
+}
+.movie-container{
+margin: 1.25rem 0;  
+}
+#movie{
+  background-color: white;
+  border: 0;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  margin-left: 0.8rem;
+  padding: 0.3rem 0.3rem;  
+}
+.seat{
+  background-color: grey;
+  background-size: contain;
+  height: 1.25rem;
+  width: 1.75rem;
+  margin: 0.5rem;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+.seat:hover{
+  cursor: pointer;
+  background-color: var(--clr-dark);
+}
+.showcase-container .seat:hover{
+  cursor: default;
+}
+.seat.occupied .seat:hover{
+  cursor: default;
+}
+.seat:nth-of-type(3){
+  margin-left: 1.5rem;
+}
+.seat:nth-last-of-type(3){
+  margin-left: 1.5rem;
+}
+.seat.selected{
+  background-color: var(--clr-dark);
+}
+.seat.occupied{
+  background-color: red;
+}
+.showcase-container{
+  min-width: 10rem;
+  background-color: rgba(0, 0, 0.5, 0.1);
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.showcase-container li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 3px;
+  padding: 3px;
+}
+.showcase-container li small{
+  margin-left: 3px;;
+}
+.screen{
+  background-color: var(--clr-screen);
+  height: 7rem;
+  width: 100%;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);  
+}
+.screen-container{
+  width: 20rem;
+  perspective: 1000px;
+  margin: 1.5rem 0;
+}
+
+.row{
+  display: flex;
+}
+.text{
+  margin: 0.6rem 0;
+}
+
+
